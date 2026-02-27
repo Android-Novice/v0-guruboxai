@@ -127,7 +127,7 @@ export function InputSection() {
           <button
             key={suggestion}
             onClick={() => setInput(suggestion)}
-            className="rounded-full border border-border bg-card/50 px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            className="suggestion-pill rounded-full border border-border bg-card/80 px-3.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:border-primary/30"
           >
             {suggestion}
           </button>

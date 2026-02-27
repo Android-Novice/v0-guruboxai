@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { User, LogOut, Menu, X } from "lucide-react"
@@ -35,40 +36,59 @@ export function Navbar() {
   return (
     <header className="glass-nav fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-        {/* Logo */}
-        <Link
-          href="/tools/product-insight"
-          className="flex items-center gap-2 text-foreground font-semibold text-lg tracking-tight"
-        >
-          <span className="text-primary font-bold">Guru</span>
-          <span className="text-foreground/80">Box</span>
-        </Link>
+        {/* Left: Logo + Nav */}
+        <div className="flex items-center gap-8">
+          {/* Logo */}
+          <Link
+            href="/tools/product-insight"
+            className="flex items-center gap-2.5"
+          >
+            <Image
+              src="/images/logo.jpg"
+              alt="GuruBox.ai"
+              width={28}
+              height={28}
+              className="rounded-md"
+            />
+            <span className="font-semibold text-base tracking-tight text-foreground">
+              GuruBox
+              <span className="text-primary">.ai</span>
+            </span>
+          </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors",
-                pathname === link.href || pathname.startsWith(link.href)
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {/* Desktop nav links */}
+          <div className="hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || pathname.startsWith(link.href)
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-primary/8 text-primary"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
 
+        {/* Right: Account */}
+        <div className="hidden items-center gap-3 md:flex">
           {isLoggedIn ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-2 rounded-full transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-                  <Avatar className="size-8">
+                <button className="flex items-center gap-2.5 rounded-full px-2 py-1 transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  <Avatar className="size-7">
                     <AvatarImage src={user?.avatar} alt={user?.name ?? "User"} />
-                    <AvatarFallback>{user?.name?.charAt(0) ?? "U"}</AvatarFallback>
+                    <AvatarFallback className="text-xs bg-primary/10 text-primary">{user?.name?.charAt(0) ?? "U"}</AvatarFallback>
                   </Avatar>
+                  <span className="text-sm font-medium text-foreground">{user?.name?.split(" ")[0]}</span>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
@@ -103,7 +123,7 @@ export function Navbar() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={logout} className="flex items-center gap-2 text-destructive-foreground">
+                <DropdownMenuItem onClick={logout} className="flex items-center gap-2 text-destructive">
                   <LogOut className="size-4" />
                   {t("nav_logout")}
                 </DropdownMenuItem>
@@ -111,10 +131,10 @@ export function Navbar() {
             </DropdownMenu>
           ) : (
             <Button
-              variant="outline"
+              variant="default"
               size="sm"
               onClick={login}
-              className="border-border text-foreground"
+              className="btn-glow"
             >
               {t("nav_login")}
             </Button>
@@ -123,7 +143,7 @@ export function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground rounded-lg p-1.5 hover:bg-accent transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -133,16 +153,16 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="glass-nav border-t border-border md:hidden">
-          <div className="flex flex-col gap-2 px-4 py-3">
+        <div className="border-t border-border bg-card/95 backdrop-blur-md md:hidden">
+          <div className="flex flex-col gap-1 px-4 py-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  "rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                   pathname === link.href || pathname.startsWith(link.href)
-                    ? "text-foreground bg-accent"
+                    ? "text-primary bg-primary/5"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent"
                 )}
                 onClick={() => setMobileOpen(false)}
@@ -154,14 +174,14 @@ export function Navbar() {
               <>
                 <Link
                   href="/account"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent"
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent"
                   onClick={() => setMobileOpen(false)}
                 >
                   {t("nav_account")}
                 </Link>
                 <button
                   onClick={() => { logout(); setMobileOpen(false) }}
-                  className="rounded-md px-3 py-2 text-left text-sm font-medium text-destructive-foreground hover:bg-accent"
+                  className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-destructive hover:bg-accent"
                 >
                   {t("nav_logout")}
                 </button>
@@ -169,7 +189,7 @@ export function Navbar() {
             ) : (
               <button
                 onClick={() => { login(); setMobileOpen(false) }}
-                className="rounded-md px-3 py-2 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent"
+                className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-primary hover:bg-accent"
               >
                 {t("nav_login")}
               </button>

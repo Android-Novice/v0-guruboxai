@@ -15,27 +15,10 @@ export const metadata: Metadata = {
   title: 'GuruBox.ai - AI Product Insight',
   description: 'Expert-level AI opportunity discovery. Enter your product direction and receive 300 evaluated opportunities.',
   generator: 'GuruBox.ai',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f0f12',
+  themeColor: '#f8f9fc',
   width: 'device-width',
   initialScale: 1,
 }
@@ -46,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className="font-sans antialiased min-h-screen">
         <AuthProvider>
           <I18nProvider>
@@ -57,12 +40,12 @@ export default function RootLayout({
             </main>
             <Toaster
               position="top-right"
-              theme="dark"
+              theme="light"
               toastOptions={{
                 style: {
-                  background: 'oklch(0.13 0.005 270)',
-                  border: '1px solid oklch(0.2 0.01 270)',
-                  color: 'oklch(0.95 0 0)',
+                  background: 'white',
+                  border: '1px solid oklch(0.91 0.005 260)',
+                  color: 'oklch(0.145 0.015 260)',
                 },
               }}
             />

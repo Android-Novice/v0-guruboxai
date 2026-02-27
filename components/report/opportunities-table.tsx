@@ -27,8 +27,8 @@ function ScoreBadge({ score }: { score: number }) {
       variant="outline"
       className={cn(
         "tabular-nums font-semibold border-0",
-        score >= 80 && "bg-[oklch(0.7_0.15_160/0.15)] text-[oklch(0.7_0.15_160)]",
-        score >= 60 && score < 80 && "bg-[oklch(0.75_0.15_85/0.15)] text-[oklch(0.75_0.15_85)]",
+        score >= 80 && "bg-emerald-100 text-emerald-700",
+        score >= 60 && score < 80 && "bg-amber-100 text-amber-700",
         score < 60 && "bg-muted text-muted-foreground"
       )}
     >
@@ -67,7 +67,7 @@ export function OpportunitiesTable({ opportunities }: OpportunitiesTableProps) {
             {pageData.map((opp, idx) => (
               <TableRow
                 key={opp.id}
-                className="row-animate border-border hover:bg-[oklch(0.16_0.008_270)]"
+                className="row-animate border-border hover:bg-accent"
                 style={{ animationDelay: `${idx * 15}ms` }}
               >
                 <TableCell className="text-muted-foreground tabular-nums text-xs">
@@ -108,7 +108,7 @@ export function OpportunitiesTable({ opportunities }: OpportunitiesTableProps) {
             size="sm"
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className="gap-1 border-border text-foreground"
+            className="gap-1"
           >
             <ChevronLeft className="size-4" />
             {t("previous")}
@@ -121,7 +121,7 @@ export function OpportunitiesTable({ opportunities }: OpportunitiesTableProps) {
             size="sm"
             onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
             disabled={page === totalPages}
-            className="gap-1 border-border text-foreground"
+            className="gap-1"
           >
             {t("next")}
             <ChevronRight className="size-4" />

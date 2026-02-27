@@ -4,81 +4,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.09 0.005 270);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.13 0.005 270);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.13 0.005 270);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.65 0.15 270);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.18 0.005 270);
-  --secondary-foreground: oklch(0.9 0 0);
-  --muted: oklch(0.18 0.005 270);
-  --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.18 0.01 270);
-  --accent-foreground: oklch(0.95 0 0);
+  --background: oklch(0.985 0.002 260);
+  --foreground: oklch(0.145 0.015 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0.015 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0.015 260);
+  --primary: oklch(0.55 0.18 260);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.005 260);
+  --secondary-foreground: oklch(0.25 0.02 260);
+  --muted: oklch(0.96 0.005 260);
+  --muted-foreground: oklch(0.52 0.02 260);
+  --accent: oklch(0.96 0.01 260);
+  --accent-foreground: oklch(0.25 0.02 260);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.55 0.2 25);
-  --border: oklch(0.2 0.01 270);
-  --input: oklch(0.2 0.01 270);
-  --ring: oklch(0.65 0.15 270);
-  --chart-1: oklch(0.65 0.15 270);
-  --chart-2: oklch(0.7 0.15 160);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.6 0.12 200);
-  --chart-5: oklch(0.55 0.1 320);
+  --border: oklch(0.91 0.005 260);
+  --input: oklch(0.91 0.005 260);
+  --ring: oklch(0.55 0.18 260);
+  --chart-1: oklch(0.55 0.18 260);
+  --chart-2: oklch(0.6 0.18 160);
+  --chart-3: oklch(0.65 0.15 85);
+  --chart-4: oklch(0.5 0.12 200);
+  --chart-5: oklch(0.45 0.1 320);
   --radius: 0.625rem;
-  --sidebar: oklch(0.11 0.005 270);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.65 0.15 270);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.18 0.01 270);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.2 0.01 270);
-  --sidebar-ring: oklch(0.65 0.15 270);
-
-  /* Custom tokens */
-  --color-premium: oklch(0.7 0.15 160);
-  --color-warning: oklch(0.75 0.15 85);
-  --color-surface: oklch(0.13 0.005 270);
-  --color-surface-hover: oklch(0.16 0.008 270);
-  --color-glow: oklch(0.65 0.15 270 / 0.3);
-}
-
-.dark {
-  --background: oklch(0.09 0.005 270);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.13 0.005 270);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.13 0.005 270);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.65 0.15 270);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.18 0.005 270);
-  --secondary-foreground: oklch(0.9 0 0);
-  --muted: oklch(0.18 0.005 270);
-  --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.18 0.01 270);
-  --accent-foreground: oklch(0.95 0 0);
-  --destructive: oklch(0.55 0.2 25);
-  --destructive-foreground: oklch(0.55 0.2 25);
-  --border: oklch(0.2 0.01 270);
-  --input: oklch(0.2 0.01 270);
-  --ring: oklch(0.65 0.15 270);
-  --chart-1: oklch(0.65 0.15 270);
-  --chart-2: oklch(0.7 0.15 160);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.6 0.12 200);
-  --chart-5: oklch(0.55 0.1 320);
-  --sidebar: oklch(0.11 0.005 270);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.65 0.15 270);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.18 0.01 270);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.2 0.01 270);
-  --sidebar-ring: oklch(0.65 0.15 270);
+  --sidebar: oklch(0.98 0.003 260);
+  --sidebar-foreground: oklch(0.145 0.015 260);
+  --sidebar-primary: oklch(0.55 0.18 260);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.96 0.01 260);
+  --sidebar-accent-foreground: oklch(0.25 0.02 260);
+  --sidebar-border: oklch(0.91 0.005 260);
+  --sidebar-ring: oklch(0.55 0.18 260);
 }
 
 @theme inline {
@@ -120,10 +78,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-premium: var(--color-premium);
-  --color-warning: var(--color-warning);
-  --color-surface: var(--color-surface);
-  --color-surface-hover: var(--color-surface-hover);
 }
 
 @layer base {
@@ -135,7 +89,7 @@
   }
 }
 
-/* Slow gradient motion background */
+/* ===== Slow Gradient Motion Background ===== */
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
@@ -154,10 +108,10 @@
 .gradient-bg {
   background: linear-gradient(
     135deg,
-    oklch(0.08 0.01 270),
-    oklch(0.1 0.015 250),
-    oklch(0.09 0.01 290),
-    oklch(0.08 0.008 230)
+    oklch(0.97 0.02 260),
+    oklch(0.96 0.015 230),
+    oklch(0.98 0.01 290),
+    oklch(0.97 0.02 200)
   );
   background-size: 400% 400%;
   animation: gradient-shift 20s ease infinite;
@@ -177,34 +131,96 @@
   }
 }
 
-/* Input glow animation */
-@keyframes glow-pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 oklch(0.65 0.15 270 / 0);
+/* Floating orbs for subtle background depth */
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(0.95); }
+  66% { transform: translate(25px, -40px) scale(1.05); }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, 40px) scale(1.03); }
+  66% { transform: translate(-35px, -25px) scale(0.97); }
+}
+
+.orb-1 {
+  animation: orb-float-1 25s ease-in-out infinite;
+  will-change: transform;
+}
+
+.orb-2 {
+  animation: orb-float-2 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+.orb-3 {
+  animation: orb-float-3 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-1, .orb-2, .orb-3 {
+    animation: none;
   }
-  50% {
-    box-shadow: 0 0 20px 2px oklch(0.65 0.15 270 / 0.15);
+}
+
+@media (max-width: 768px) {
+  .orb-1, .orb-2, .orb-3 {
+    animation: none;
   }
+}
+
+/* ===== Input Glow Animation ===== */
+.input-glow {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .input-glow:focus-within {
-  box-shadow: 0 0 0 1px oklch(0.65 0.15 270 / 0.5),
-              0 0 15px 2px oklch(0.65 0.15 270 / 0.1);
-  transition: box-shadow 0.3s ease;
+  border-color: oklch(0.55 0.18 260 / 0.4);
+  box-shadow: 0 0 0 3px oklch(0.55 0.18 260 / 0.08),
+              0 0 20px 2px oklch(0.55 0.18 260 / 0.06);
 }
 
-/* Button effects */
+/* ===== Button Effects ===== */
 .btn-glow {
-  transition: all 0.2s ease;
-}
-.btn-glow:hover {
-  box-shadow: 0 0 20px 2px oklch(0.65 0.15 270 / 0.2);
-}
-.btn-glow:active {
-  transform: scale(0.98);
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-/* Table row animation */
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  box-shadow: 0 0 24px 4px oklch(0.55 0.18 260 / 0.2);
+  pointer-events: none;
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
+}
+
+.btn-glow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px oklch(0.55 0.18 260 / 0.15);
+}
+
+.btn-glow:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 4px oklch(0.55 0.18 260 / 0.1);
+}
+
+/* ===== Table Row Animation ===== */
 @keyframes row-fade-in {
   from {
     opacity: 0;
@@ -221,38 +237,21 @@
   opacity: 0;
 }
 
-/* Signal scanning animation */
+/* ===== Signal Scanning Animation ===== */
 @keyframes scan-line {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
 }
 
 @keyframes scan-pulse {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
 }
 
 @keyframes scan-dot {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(0); opacity: 0; }
 }
 
 .scan-line {
@@ -267,45 +266,49 @@
   animation: scan-dot 1.5s ease-in-out infinite;
 }
 
-/* Stage pulse */
+/* ===== Stage Pulse ===== */
 @keyframes stage-pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 oklch(0.65 0.15 270 / 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 8px oklch(0.65 0.15 270 / 0);
-  }
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.55 0.18 260 / 0.4); }
+  50% { box-shadow: 0 0 0 8px oklch(0.55 0.18 260 / 0); }
 }
 
 .stage-active {
   animation: stage-pulse 2s ease-in-out infinite;
 }
 
-/* Count up number animation */
+/* ===== Count Animation ===== */
 @keyframes count-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .count-animate {
   animation: count-in 0.5s ease forwards;
 }
 
-/* Page transition */
+/* ===== Page Fade ===== */
 .page-fade {
   animation: row-fade-in 0.3s ease forwards;
 }
 
-/* Glassmorphism navbar */
+/* ===== Glassmorphism Navbar ===== */
 .glass-nav {
-  backdrop-filter: blur(12px) saturate(1.5);
-  -webkit-backdrop-filter: blur(12px) saturate(1.5);
-  background: oklch(0.09 0.005 270 / 0.8);
-  border-bottom: 1px solid oklch(0.2 0.01 270 / 0.5);
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  background: oklch(1 0 0 / 0.7);
+  border-bottom: 1px solid oklch(0.91 0.005 260 / 0.8);
+}
+
+/* ===== Suggestion Pills ===== */
+.suggestion-pill {
+  transition: all 0.2s ease;
+}
+
+.suggestion-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px oklch(0.55 0.18 260 / 0.08);
+}
+
+.suggestion-pill:active {
+  transform: translateY(0) scale(0.98);
 }

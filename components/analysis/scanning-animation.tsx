@@ -10,7 +10,7 @@ export function ScanningAnimation({ isActive }: ScanningAnimationProps) {
   if (!isActive) return null
 
   return (
-    <div className="relative h-32 w-full overflow-hidden rounded-lg border border-border/50 bg-card/30">
+    <div className="relative h-32 w-full overflow-hidden rounded-lg border border-border bg-card/60">
       {/* Grid background */}
       <div className="absolute inset-0 opacity-10">
         {Array.from({ length: 8 }).map((_, i) => (

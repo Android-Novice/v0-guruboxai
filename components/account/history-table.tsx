@@ -62,14 +62,14 @@ export function HistoryTable() {
   const getStatusBadge = (report: Report) => {
     if (report.status === "completed") {
       return (
-        <Badge variant="outline" className="border-0 bg-[oklch(0.7_0.15_160/0.15)] text-[oklch(0.7_0.15_160)]">
+        <Badge variant="outline" className="border-0 bg-emerald-100 text-emerald-700">
           {t("status_completed")}
         </Badge>
       )
     }
     if (report.status === "generating") {
       return (
-        <Badge variant="outline" className="border-0 bg-[oklch(0.75_0.15_85/0.15)] text-[oklch(0.75_0.15_85)]">
+        <Badge variant="outline" className="border-0 bg-amber-100 text-amber-700">
           {t("status_generating")}
         </Badge>
       )
@@ -107,7 +107,7 @@ export function HistoryTable() {
             {visibleReports.map((report, idx) => (
               <TableRow
                 key={report.id}
-                className="row-animate border-border hover:bg-[oklch(0.16_0.008_270)]"
+                className="row-animate border-border hover:bg-accent"
                 style={{ animationDelay: `${idx * 30}ms` }}
               >
                 <TableCell className="max-w-[200px] truncate text-sm font-medium text-foreground">
@@ -167,10 +167,10 @@ export function HistoryTable() {
       </div>
 
       <Dialog open={!!deleteId} onOpenChange={(open) => !open && setDeleteId(null)}>
-        <DialogContent className="bg-card border-border sm:max-w-md">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-foreground">{t("report_delete_confirm")}</DialogTitle>
-            <DialogDescription className="text-muted-foreground">
+            <DialogTitle>{t("report_delete_confirm")}</DialogTitle>
+            <DialogDescription>
               {t("report_delete_confirm_desc")}
             </DialogDescription>
           </DialogHeader>
@@ -178,7 +178,6 @@ export function HistoryTable() {
             <Button
               variant="outline"
               onClick={() => setDeleteId(null)}
-              className="border-border text-foreground"
             >
               {t("report_delete_cancel")}
             </Button>

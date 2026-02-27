@@ -29,10 +29,10 @@ export function LoginDialog({ open, onOpenChange, onLoginSuccess }: LoginDialogP
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md bg-card border-border">
+      <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-foreground">{t("login_required")}</DialogTitle>
-          <DialogDescription className="text-muted-foreground">
+          <DialogTitle>{t("login_required")}</DialogTitle>
+          <DialogDescription>
             {t("login_desc")}
           </DialogDescription>
         </DialogHeader>

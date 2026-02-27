@@ -46,7 +46,7 @@ export function ExportButtons({ reportId }: ExportButtonsProps) {
       <Button
         variant="outline"
         onClick={handleExportPdf}
-        className="btn-glow gap-2 border-border text-foreground"
+        className="btn-glow gap-2"
       >
         <FileText className="size-4" />
         {t("report_export_pdf")}
@@ -54,7 +54,7 @@ export function ExportButtons({ reportId }: ExportButtonsProps) {
       <Button
         variant="outline"
         onClick={handleExportDocs}
-        className="btn-glow gap-2 border-border text-foreground"
+        className="btn-glow gap-2"
       >
         <FileDown className="size-4" />
         {t("report_export_docs")}
@@ -70,10 +70,10 @@ export function ExportButtons({ reportId }: ExportButtonsProps) {
       </Button>
 
       <Dialog open={deleteOpen} onOpenChange={setDeleteOpen}>
-        <DialogContent className="bg-card border-border sm:max-w-md">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-foreground">{t("report_delete_confirm")}</DialogTitle>
-            <DialogDescription className="text-muted-foreground">
+            <DialogTitle>{t("report_delete_confirm")}</DialogTitle>
+            <DialogDescription>
               {t("report_delete_confirm_desc")}
             </DialogDescription>
           </DialogHeader>
@@ -81,7 +81,6 @@ export function ExportButtons({ reportId }: ExportButtonsProps) {
             <Button
               variant="outline"
               onClick={() => setDeleteOpen(false)}
-              className="border-border text-foreground"
             >
               {t("report_delete_cancel")}
             </Button>

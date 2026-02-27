@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function TermsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 page-fade">
-      <article className="prose prose-invert max-w-none">
+      <article className="max-w-none">
         <h1 className="text-3xl font-bold text-foreground">Terms of Service</h1>
         <p className="text-sm text-muted-foreground">Last updated: February 26, 2026</p>
 
