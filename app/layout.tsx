@@ -6,6 +6,7 @@ import { AuthProvider } from '@/components/auth/auth-provider'
 import { I18nProvider } from '@/components/i18n/i18n-provider'
 import { GradientBackground } from '@/components/layout/gradient-background'
 import { Navbar } from '@/components/layout/navbar'
+import { Footer } from '@/components/layout/footer'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -30,14 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased min-h-screen">
+        <body className="font-sans antialiased flex min-h-screen flex-col">
         <AuthProvider>
           <I18nProvider>
             <GradientBackground />
             <Navbar />
-            <main className="pt-14">
+            <main className="flex-1 pt-14">
               {children}
             </main>
+            <Footer />
             <Toaster
               position="top-right"
               theme="light"

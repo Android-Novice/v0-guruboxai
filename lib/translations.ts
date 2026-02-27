@@ -78,6 +78,10 @@ type TranslationKeys = {
   // Common
   previous: string
   next: string
+  // Footer
+  footer_privacy: string
+  footer_terms: string
+  footer_copyright: string
 }
 
 const en: TranslationKeys = {
@@ -150,6 +154,9 @@ const en: TranslationKeys = {
   status_deleted: "Deleted",
   previous: "Previous",
   next: "Next",
+  footer_privacy: "Privacy Policy",
+  footer_terms: "Terms of Service",
+  footer_copyright: "GuruBox.ai. All rights reserved.",
 }
 
 const zh: TranslationKeys = {
@@ -222,6 +229,9 @@ const zh: TranslationKeys = {
   status_deleted: "已删除",
   previous: "上一页",
   next: "下一页",
+  footer_privacy: "隐私政策",
+  footer_terms: "服务条款",
+  footer_copyright: "GuruBox.ai. 保留所有权利。",
 }
 
 const de: TranslationKeys = {
@@ -294,6 +304,9 @@ const de: TranslationKeys = {
   status_deleted: "Geloscht",
   previous: "Zuruck",
   next: "Weiter",
+  footer_privacy: "Datenschutzrichtlinie",
+  footer_terms: "Nutzungsbedingungen",
+  footer_copyright: "GuruBox.ai. Alle Rechte vorbehalten.",
 }
 
 const fr: TranslationKeys = {
@@ -366,6 +379,9 @@ const fr: TranslationKeys = {
   status_deleted: "Supprime",
   previous: "Precedent",
   next: "Suivant",
+  footer_privacy: "Politique de confidentialite",
+  footer_terms: "Conditions d'utilisation",
+  footer_copyright: "GuruBox.ai. Tous droits reserves.",
 }
 
 const it: TranslationKeys = {
@@ -438,6 +454,9 @@ const it: TranslationKeys = {
   status_deleted: "Eliminato",
   previous: "Precedente",
   next: "Successivo",
+  footer_privacy: "Informativa sulla privacy",
+  footer_terms: "Termini di servizio",
+  footer_copyright: "GuruBox.ai. Tutti i diritti riservati.",
 }
 
 const es: TranslationKeys = {
@@ -510,6 +529,9 @@ const es: TranslationKeys = {
   status_deleted: "Eliminado",
   previous: "Anterior",
   next: "Siguiente",
+  footer_privacy: "Politica de privacidad",
+  footer_terms: "Terminos de servicio",
+  footer_copyright: "GuruBox.ai. Todos los derechos reservados.",
 }
 
 const pt: TranslationKeys = {
@@ -582,6 +604,9 @@ const pt: TranslationKeys = {
   status_deleted: "Excluido",
   previous: "Anterior",
   next: "Proximo",
+  footer_privacy: "Politica de Privacidade",
+  footer_terms: "Termos de Servico",
+  footer_copyright: "GuruBox.ai. Todos os direitos reservados.",
 }
 
 export const translations: Record<Language, TranslationKeys> = {
