@@ -27,9 +27,9 @@ export function AnalysisSteps({ currentStage, completedStages, isComplete }: Ana
             key={stage.id}
             className={cn(
               "flex items-center gap-4 rounded-lg border px-4 py-3 transition-all duration-300",
-              isCompleted && "border-primary/30 bg-primary/5",
-              isCurrent && "border-primary/50 bg-primary/10",
-              !isCompleted && !isCurrent && "border-border/50 bg-card/30 opacity-50"
+              isCompleted && "border-primary/20 bg-primary/5",
+              isCurrent && "border-[oklch(0.78_0.14_70/0.4)] bg-[oklch(0.82_0.12_85/0.08)]",
+              !isCompleted && !isCurrent && "border-border/40 bg-card/40 opacity-50"
             )}
             style={{ animationDelay: `${index * 50}ms` }}
           >
@@ -38,7 +38,7 @@ export function AnalysisSteps({ currentStage, completedStages, isComplete }: Ana
               className={cn(
                 "flex size-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300",
                 isCompleted && "border-primary bg-primary text-primary-foreground",
-                isCurrent && "stage-active border-primary bg-primary/20 text-primary",
+                isCurrent && "stage-active border-[oklch(0.78_0.14_70)] bg-[oklch(0.82_0.12_85/0.2)] text-[oklch(0.65_0.14_70)]",
                 !isCompleted && !isCurrent && "border-border text-muted-foreground"
               )}
             >

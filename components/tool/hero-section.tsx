@@ -7,6 +7,15 @@ export function HeroSection() {
 
   return (
     <div className="flex flex-col items-center gap-4 text-center page-fade">
+      {/* Spark accent above title */}
+      <div
+        className="mb-1 size-2 rounded-full"
+        style={{
+          background: 'oklch(0.82 0.12 85)',
+          boxShadow: '0 0 12px 4px oklch(0.82 0.12 85 / 0.3)',
+        }}
+        aria-hidden="true"
+      />
       <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
         {t("tool_title")}
       </h1>

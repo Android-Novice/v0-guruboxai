@@ -100,7 +100,10 @@ export function InputSection() {
           <Button
             onClick={handleStart}
             disabled={!input.trim()}
-            className="btn-glow gap-2 bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
+            className="btn-glow gap-2 disabled:opacity-40"
+            style={{
+              background: !input.trim() ? undefined : 'linear-gradient(135deg, oklch(0.58 0.16 250), oklch(0.52 0.14 260))',
+            }}
           >
             {t("tool_start")}
             <ArrowRight className="size-4" />
