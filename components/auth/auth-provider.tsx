@@ -13,6 +13,7 @@ interface AuthContextType {
   tasks: Task[]
   runningTask: Task | null
   addReport: (report: Report) => void
+  updateReport: (reportId: string, updates: Partial<Report>) => void
   addTask: (task: Task) => void
   updateTask: (taskId: string, updates: Partial<Task>) => void
   deleteReport: (reportId: string) => void
@@ -56,6 +57,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setReports((prev) => [report, ...prev])
   }, [])
 
+  const updateReport = useCallback((reportId: string, updates: Partial<Report>) => {
+    setReports((prev) =>
+      prev.map((r) => (r.id === reportId ? { ...r, ...updates } : r))
+    )
+  }, [])
+
   const addTask = useCallback((task: Task) => {
     setTasks((prev) => [task, ...prev])
   }, [])
@@ -95,6 +102,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         tasks,
         runningTask,
         addReport,
+        updateReport,
         addTask,
         updateTask,
         deleteReport,

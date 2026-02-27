@@ -30,7 +30,7 @@ export default function AnalysisPage() {
   const params = useParams()
   const router = useRouter()
   const taskId = params.task_id as string
-  const { getTask, updateTask, reports } = useAuth()
+  const { getTask, updateTask, updateReport } = useAuth()
   const { t } = useI18n()
 
   const [currentStageIndex, setCurrentStageIndex] = useState(0)

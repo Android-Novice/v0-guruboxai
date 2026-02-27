@@ -9,7 +9,6 @@ import { LoginDialog } from "@/components/auth/login-dialog"
 import { Button } from "@/components/ui/button"
 import { SUGGESTIONS } from "@/lib/constants"
 import type { Report, Task } from "@/lib/types"
-import { getOpportunitiesForReport } from "@/lib/mock-data"
 import Link from "next/link"
 
 export function InputSection() {
